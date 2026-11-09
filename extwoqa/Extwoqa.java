@@ -80,10 +80,104 @@ System.out.println(x > 2 ? x < 4 ? 10 : 8 : 7); //L4
 
 
 */
-//Q8.
-boolean x = true, z = true; //L3
+//Q8. Ans: B
+/*boolean x = true, z = true; //L3
 int y = 20; //L4
-x = ( y != 10) ^ (z = false);
-System.out.println(x + ", " + y + ", " + z);
+x = ( y != 10) ^ (z = false); 
+System.out.println(x + ", " + y + ", " + z); */
+//Q12. What is the output of the following code snippet?
+//Ans: D
+/*
+A. Success B. Failure C. The code will not compile because of line 4 D. The code will not compile because of line 5*/
+/*int x = 0;
+String s = null; //L4
+if (x == s) System.out.println("Success"); //L5
+else System.out.println("Failure"); */
+
+//Q13. What is the output of the following code snippet?
+/*
+Ans: A
+A. Success B. Failure Cd. The Code will not compile because of line 4. D. The code will not compile because of line 5.
+*/
+/* 
+int x1 = 50, x2 = 75;
+boolean b = x1 >= x2; //L4
+if (b = true) System.out.println("Success");
+else System.out.println("Failure");
+*/
+//Q14. What is the output of the following code snippet?
+/*int c = 7; 
+int result = 4;
+result += ++c; //L5
+System.out.println(result);*/
+//Q15. What is the output of the following code snippet? Ans E no parenthesis
+/*int x = 1, y = 15; //L3
+while x < 10 //L4
+y--;
+x++;
+System.out.println(x + ", " + y);*/
+
+
+//Q16. What is the output of the following code snippet? Ans D. y is out of the scope at line 6
+/* 
+A. 1 2 3 4 5 6 7 8 9 B. 1 2 3 4 5 6 7 8 9 10 C. 1 2 3 4 5 6 7 8 9 10 11 D. The code will not compile because of line 6
+E. The code contains an infinite loop and does not terminate.
+
+do {
+int y = 1;
+System.out.print(y++ + " ");
+
+} while (y <= 10); 
+*/
+//Q17. What is the output of the following code snippet?
+//Ans: A. 7 B. 9 C. 10 D. 11 E. 15 F. The code will not compile because of line 8 Ans. D
+{ //b1
+boolean keepGoing = true;
+int result = 15, i = 10;
+do {
+    i--; // i = 9
+    if (i == 8) keepGoing = false;
+    result -= 2; //Line 8 result = 13
+ } while (keepGoing);
+    System.out.println(result);
+} //b2
+{
+//Q18. What is the output of the following code snippet?
+//A. 1 B. 2. C. 3 D. 4 E. 6 F. The code will not compile because of line 6 Ans A.
+int count = 0;
+ROW_LOOP: for (int row = 1; row <= 3; row++)
+    for (int col = 1; col <= 2; col++){
+        if (row * col % 2 == 0) continue ROW_LOOP; //L6
+        count++;
+    }
+    System.out.println(count);
+}
+//Q19. What is the result of the following code snippet? Ans:
+int m = 9, n = 1, x =0;
+while (m > n){
+    m--;
+    n += 2;
+    x += m + n; //L7
+}
+System.out.println(x);
+/*
+A. 11 B. 13 C. 23 D. 36 E. 50 F. The conde will not compile because of line 7 Ans D
+*/
+//Q20. What is the result of the following code snippet?
+final char a = 'A', d = 'D'; //L3
+char grade = 'B';
+switch ((grade)) {
+    case a: //L6
+
+       case 'B': System.out.print("great");
+       case 'C': System.out.print("Good"); break;
+       case d: //L9
+       case 'F': System.out.print("not good");
+}
+/*
+A. great B. greatgood C. The code will not compile because of line 3 D. The code will not compile because of line 6 
+E. The code will not compile because of line 6 and 9
+*/
+
     }
 }
